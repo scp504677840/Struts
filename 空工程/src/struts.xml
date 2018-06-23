@@ -12,4 +12,7 @@
         </action>
     </package>
 
+    <!-- 学生模块 -->
+    <include file="student.xml"/>
+
 </struts>

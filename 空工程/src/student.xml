@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- 学生模块配置 -->
+<struts>
+
+    <package name="student" namespace="/student" extends="struts-default">
+        <!-- 添加学生表单 -->
+        <action name="input" class="main.StudentAction" method="input">
+            <result name="success">add.jsp</result>
+        </action>
+
+        <!--  保存学生 -->
+        <action name="save" class="main.StudentAction" method="save">
+            <result name="success">detail.jsp</result>
+        </action>
+    </package>
+
+</struts>
