@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <constant name="struts.action.extension" value="action,do,"/>
+
+    <package name="user" extends="struts-default">
+        <action name="execute" class="main.UserAction" method="execute">
+
+            <!-- 转发到jsp -->
+            <result name="dispatcher" type="dispatcher">dispatcher.jsp</result>
+
+            <!-- 重定向到jsp -->
+            <result name="redirect" type="redirect">redirect.jsp</result>
+
+            <!-- 重定向到Action 方式一 -->
+            <!--<result name="redirect" type="redirect">/student/login.action</result>-->
+            <!-- 重定向到Action 方式二 -->
+            <result name="redirectAction" type="redirectAction">
+                <param name="namespace">/student</param>
+                <param name="actionName">login</param>
+            </result>
+
+            <!-- 转发到Action -->
+            <result name="chain" type="chain">/student/login</result>
+        </action>
+    </package>
+
+    <package name="student" extends="struts-default" namespace="/student">
+        <action name="login"></action>
+    </package>
+
+</struts>
