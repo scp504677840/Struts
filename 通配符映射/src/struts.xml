@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <constant name="struts.action.extension" value="action,do,"/>
+
+    <package name="user" extends="struts-default">
+        <!-- 传统写法 -->
+        <!--<action name="save" class="main.UserAction" method="save">
+            <result name="save-success">/save.jsp</result>
+        </action>
+        <action name="update" class="main.UserAction" method="update">
+            <result name="update-success">/update.jsp</result>
+        </action>
+        <action name="delete" class="main.UserAction" method="delete">
+            <result name="delete-success">/delete.jsp</result>
+        </action>
+        <action name="query" class="main.UserAction" method="query">
+            <result name="query-success">/query.jsp</result>
+        </action>-->
+
+        <!-- 通配符 -->
+        <action name="*" class="main.UserAction" method="{1}">
+            <result name="{1}-success">/index.jsp</result>
+        </action>
+
+        <!-- 当action名称相同时，按照action定义顺序匹配 -->
+        <action name="save" class="main.UserAction" method="test">
+            <result name="test-success">/index.jsp</result>
+        </action>
+    </package>
+
+
+</struts>
