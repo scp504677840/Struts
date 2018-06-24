@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.dtd">
+<validators>
+    <!-- Action中到字段 -->
+    <field name="age">
+        <field-validator type="int">
+            <param name="min">20</param>
+            <param name="max">50</param>
+            <!-- 错误信息可以取自国际化 -->
+            <message key="error.int"/>
+        </field-validator>
+    </field>
+</validators>
