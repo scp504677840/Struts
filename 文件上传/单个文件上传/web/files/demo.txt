@@ -1,0 +1,57 @@
+卟丿丨丶了
+
+//
+docker pull hub.c.163.com/library/mysql:latest
+
+//更新镜像
+docker commit -m "mysql user table" -a "scp" 505e93ac99ae mysql:1.1.1
+
+docker run -d -v mysql:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=scp15335747148 -e MYSQL_DATABASE=cj mysql:1.1.1
+
+//
+npm install --save @angular/material @angular/cdk
+npm install --save hammerjs
+npm install --save normalize.css
+
+1.@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+2.import 'hammerjs';
+3.<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+4.@import "~normalize.css";/* css resets */
+
+/*Form Controls*/
+MatAutocompleteModule,
+MatCheckboxModule,
+MatDatepickerModule,
+MatFormFieldModule,
+MatInputModule,
+MatRadioModule,
+MatSelectModule,
+MatSliderModule,
+MatSlideToggleModule,
+/*Navigation*/
+MatMenuModule,
+MatSidenavModule,
+MatToolbarModule,
+/*Layout*/
+MatCardModule,
+MatDividerModule,
+MatExpansionModule,
+MatGridListModule,
+MatListModule,
+MatStepperModule,
+MatTabsModule,
+/*Buttons & Indicators*/
+MatButtonModule,
+MatButtonToggleModule,
+MatChipsModule,
+MatIconModule,
+MatProgressSpinnerModule,
+MatProgressBarModule,
+/*Popups & Modals*/
+MatDialogModule,
+MatSnackBarModule,
+MatTooltipModule,
+/*Data table*/
+MatPaginatorModule,
+MatSortModule,
+MatTableModule,
